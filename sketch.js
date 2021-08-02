@@ -30,6 +30,7 @@ function draw() {
   edges= createEdgeSprites();
   rabbit.collide(edges);
   rabbit.x=World.mouseX;
+  
 
 var select_sprites = Math.round(random(1,2));
 if (frameCount % 80 == 0){
@@ -47,14 +48,14 @@ apple = createSprite(random(50,350),40, 10, 10);
 apple.addImage(appleImg);
 apple.scale = 0.05;
 apple.velocityY = 2;
-
- }
+apple.lifetime=150;
+}
 
  function createLeaves() {
   leaf = createSprite(random(50,350),40, 10, 10);
   leaf.addImage(leafImg);
   leaf.velocityY = 2;
   leaf.scale = 0.05;
-  
-   }
+  leaf.lifetime=150;
+ }
  
